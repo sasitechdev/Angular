@@ -1,0 +1,49 @@
+
+<h4 class="col-sm-12">TEST PROJECT</h4>
+<div class="col-sm-12">
+    <uib-tabset active="active">
+        <uib-tab index="0" heading="Task 1">
+            <form>
+                <div class="col-sm-6 form-group tab1">
+                    <div class="col-sm-12">
+                        <label for="columnCode">Enter a Number</label>
+                        <input type="number" ng-model="testProjectCtrlVm.code" class="form-control" id="columnCode" placeholder="Enter Column Code">
+                        <button type="button" class="btn btn-primary" ng-click="testProjectCtrlVm.calcColumnValue()">Ok</button>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="columnCode">The excel column code : </label>
+                        <i>{{testProjectCtrlVm.columnCode}}</i>
+                    </div>
+                </div>
+            </form>
+        </uib-tab>
+        <uib-tab index="1" heading="Task 2">
+            <div class="col-sm-12 tab2">
+                <button class="button round-button">A</button>
+                <br/>
+            </div>
+        </uib-tab>
+        <uib-tab class="tab3" index="2" heading="Task 3">
+            <form>
+                <div class="col-sm-6 form-group tab3">
+                    <div class="col-sm-12">
+                        <label for="numberRep">Enter a value</label>
+                        <input type="text" ng-model="testProjectCtrlVm.numberStr" class="form-control" id="numberRep" placeholder="Enter number">
+                        <button type="button" class="btn btn-primary" ng-click="testProjectCtrlVm.convertToWordArray()">Ok</button>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="columnCode">The word representation of the given number : </label>
+                        <div class="col-sm-12" ng-repeat="convertedWord in testProjectCtrlVm.convertedWordArray">
+                            <i>{{convertedWord}}</i>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </uib-tab>
+        <uib-tab index="3" heading="Task 4">
+            <div class="tab4">
+                <div class="custom-linear"></div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>
